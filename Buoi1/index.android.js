@@ -13,18 +13,7 @@ import MangHinhC from './Component/MangHinhC.js';
 export default class Buoi1 extends Component {
   sendScene(route, navigator){
     switch (route.name) {
-      // case 'mha':
-      //
-      //   break;
-      // case 'mhb':
-      //     return (
-      //       <MangHinhB
-      //       gotoBack={()=>{
-      //         navigator.pop();
-      //       }}
-      //       />
-      //     );
-      //   break;
+  
       case 'mhb':
           return (
             <MangHinhB

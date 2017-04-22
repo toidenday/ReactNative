@@ -10,7 +10,7 @@ export default class MangHinhA extends Component{
         <TouchableOpacity style={{margin:10}}  onPress={()=>{this.props.gotoB()}}>
           <Text style={{margin:10, color:'#ff0'}}>Màng hình B</Text>
         </TouchableOpacity>
-
+        
         <TouchableOpacity style={{margin:10}}  onPress={()=>{this.props.gotoC()}}>
           <Text style={{margin:10, color:'#ff0'}}>Màng hình C</Text>
         </TouchableOpacity>
