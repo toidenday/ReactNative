@@ -1,30 +1,34 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Drawer from 'react-native-drawer';
-
+import Tabbar from './Tabbar/Tabbar';
+import Header from './Headers/Header';
+import Menu from './Menu/Menu';
 export default class App extends Component {
-    state = {}
+
     openControlPanel = () => {
         this._drawer.open()
     };
+
     render() {
         return (
+            // Menu Drawer 
             <Drawer
+                type="overlay"
                 openDrawerOffset={0.4}
                 tapToClose={true}
                 ref={(ref) => this._drawer = ref}
                 content={
-                    <View style={{ flex: 1, backgroundColor: 'blue' }}>
-                        <Text> Menu Drawer </Text>
-                    </View>
+                    <Menu />
                 }
             >
-                <View style={styles.wapper}>
-                    <TouchableOpacity onPress={() => {this.openControlPanel()}} >
-                        <Text style={styles.TextContent}>Content Drawer </Text>
-                    </TouchableOpacity>
-                </View>
+                {/*Header */}
+                <Header openMenuDrawer={this.openControlPanel} />
+                {/*Tab Bar */}
+                <Tabbar />
+
             </Drawer>
+
 
         );
     }
@@ -36,6 +40,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
     },
     TextContent: {
-        color: '#FFF',
+        color: 'red',
     }
 });
