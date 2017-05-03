@@ -16,15 +16,17 @@ export default class Tabbar extends Component {
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'home'}
                     title="Home"
-                    badgeText="1"
-                    onPress={() => this.setState({ selectedTab: 'home' })}>
 
-                    <Home />
+                    onPress={() => this.setState({ selectedTab: 'home' })}>
+                    <View style={{ backgroundColor: '#e2dede', flex: 1 }}>
+                        <Home />
+                    </View>
                 </TabNavigator.Item>
 
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'contact'}
                     title="Contact"
+                    badgeText="1"
                     onPress={() => this.setState({ selectedTab: 'contact' })}>
 
                     <Contact />
